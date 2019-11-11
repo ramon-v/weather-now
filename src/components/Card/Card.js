@@ -14,11 +14,11 @@ const Card = () => {
         <div className="info">
           <div className="humidity">
             <span>HUMIDITY</span>
-            <p>75%</p>
+            <p>75<small>%</small></p>
           </div>
           <div className="pressure">
             <span>PRESSURE</span>
-            <p>892hPa</p>
+            <p>892<small>hPa</small></p>
           </div>
         </div>
         <p className="last-update">Updated at 20:48:27 PM</p>
