@@ -1,0 +1,83 @@
+@import '../../assets/scss/colors.scss';
+
+.card {
+  width: 250px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  margin-bottom: 30px;
+  box-shadow: 0 0 4px $box_shadow;
+
+  &:last-child {
+    margin: 0;
+  }
+
+  .card-header {
+    border-bottom: 2px solid $divider;
+    text-align: center;
+
+    h2 {
+      font-weight: 300;
+      color: $dark_grey;
+      margin: 15px 0;
+    }
+  }
+
+  .temperature {
+    height: 138px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    h3 {
+      font-size: 100px;
+      font-weight: 300;
+      color: $orange;
+      margin: 0;
+
+      &.cold {
+        color: $blue;
+      }
+
+      &.heat {
+        color: $red;
+      }
+    }
+  }
+
+  .card-footer {
+    display: flex;
+    flex-direction: column;
+    background-color: $card_footer;
+    padding-top: 17px;
+  }
+
+  .info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    span {
+      color: $grey;
+      font-size: 13px;
+    }
+
+    p {
+      color: $dark_grey;
+      font-size: 16px;
+    }
+  }
+
+  .last-update {
+    font-size: 11px;
+    color: $grey;
+    text-align: center;
+  }
+}
