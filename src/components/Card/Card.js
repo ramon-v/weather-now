@@ -8,7 +8,7 @@ const Card = () => {
         <h2>Urubici, BR</h2>
       </div>
       <div className="temperature">
-        <h3>19°</h3>
+        <h3>19<sup>°</sup></h3>
       </div>
       <div className="card-footer">
         <div className="info">
