@@ -1,10 +1,15 @@
+import 'normalize.css';
 import './style.scss';
 import React from 'react';
-import openWeather from '../../api/openWeather';
+import Header from '../Header/Header';
+import Card from '../Card/Card';
 
 const App = () => {
   return (
-    <div className="app">App</div>
+    <div className="app">
+      <Header />
+      <Card />
+    </div>
   );
 }
 
