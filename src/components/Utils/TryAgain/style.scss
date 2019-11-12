@@ -1,0 +1,29 @@
+@import '../../../assets/scss/colors.scss';
+
+.try-again {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 33px 0 50px;
+
+  p {
+    color: $red;
+    margin-bottom: 18px;
+  }
+
+  button {
+    background: unset;
+    color: $dark_grey;
+    border: 2px solid $dark_grey;
+    font-size: 16px;
+    padding: 11px 15px 9px;
+    border-radius: 25px;
+    outline: none;
+    cursor: pointer;
+    transition: all .2s linear;
+
+    &:hover {
+      opacity: .5;
+    }
+  }
+}

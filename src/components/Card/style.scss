@@ -1,0 +1,111 @@
+@import '../../assets/scss/colors.scss';
+
+.card {
+  min-width: 250px;
+  width: 100%;
+  max-width: 510px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  margin-bottom: 30px;
+  box-shadow: 0 0 4px $box_shadow;
+
+  @media screen and (min-width: 1024px) {
+    max-width: 380px;
+    margin: 0 25px;
+
+    &:nth-child(2) {
+      order: -1;
+    }
+  }
+
+  &:first-child .info {
+    display: flex;
+  }
+
+  &:last-child {
+    margin: 0;
+
+    @media screen and (min-width: 1024px) {
+      margin: 0 25px;
+    }
+  }
+
+  .card-header {
+    border-bottom: 1px solid $divider;
+    text-align: center;
+
+    h2 {
+      font-weight: 300;
+      font-size: 18px;
+      color: $dark_grey;
+      margin: 12px 0 11px;
+    }
+  }
+
+  .temperature {
+    height: 138px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    h3 {
+      font-size: 88px;
+      font-weight: 300;
+      color: $orange;
+      margin: 0;
+      letter-spacing: -2px;
+
+      &.cold {
+        color: $blue;
+      }
+
+      &.hot {
+        color: $red;
+      }
+    }
+
+    sup {
+      top: -.45em;
+      font-size: 49px;
+    }
+  }
+
+  .card-footer {
+    display: flex;
+    flex-direction: column;
+    background-color: $card_footer;
+  }
+
+  .info {
+    display: none;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-top: 15px;
+
+    div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    span {
+      color: $grey;
+      font-size: 12px;
+    }
+
+    p {
+      color: $dark_grey;
+      font-size: 17px;
+      margin: 4px 0 0;
+    }
+  }
+
+  .last-update {
+    font-size: 10px;
+    color: $grey;
+    text-align: center;
+    margin: 10px 0 15px;
+  }
+}

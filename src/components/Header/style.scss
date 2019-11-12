@@ -1,0 +1,17 @@
+@import '../../assets/scss/colors.scss';
+
+.header {
+  width: 100%;
+  height: 55px;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  box-shadow: 1px 1px 1px $box_shadow;
+  position: fixed;
+  z-index: 10;
+
+  .logo {
+    width: 162px;
+    height: 55px;
+  }
+}
