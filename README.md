@@ -45,3 +45,11 @@ Notice that all state management is made using [React Hooks](https://reactjs.org
 As the data fetching is not returned yet, it will render a `Loader` component as placeholder, but if there's some error it will render `TryAgain` component instead that has an `onClick` function that will call `fetchData()`.
 
 `Card` component also has a function `displayCelsius()` to add a class according to the temperature number and will apply a color to it (`cold` or `hot`).
+
+## Diagrams
+  
+#### App Diagram
+![App Diagram](https://i.ibb.co/8568zvb/app-diagram.jpg)
+  
+#### Axios Diagram
+![Axios Diagram](https://i.ibb.co/VgdTn5P/axios.jpg)
