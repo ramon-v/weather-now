@@ -11,7 +11,7 @@ Weather Now uses a number of open source projects to work properly:
 * [Normalize] - A modern, HTML5-ready alternative to CSS resets
 
 
-### Installation
+## Installation
 
 Weather Now requires [Node.js](https://nodejs.org/) v10.16+ to run.
 
@@ -28,7 +28,7 @@ $ npm install
 $ npm start
 ```
 
-#### Production build
+### Production build
 
 ```sh
 $ npm run build
