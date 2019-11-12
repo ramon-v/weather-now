@@ -49,7 +49,7 @@ As the data fetching is not returned yet, it will render a `Loader` component as
 ## Diagrams
   
 #### App Diagram
-![App Diagram](https://i.ibb.co/8568zvb/app-diagram.jpg)
+![App Diagram](https://i.ibb.co/YkMd4j9/app-diagram.jpg)
   
 #### Axios Diagram
 ![Axios Diagram](https://i.ibb.co/VgdTn5P/axios.jpg)
