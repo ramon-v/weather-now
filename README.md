@@ -40,6 +40,7 @@ If the data retrieving is sucessfull, the response data will be attached to `cit
 Notice that all state management is made using [React Hooks](https://reactjs.org/docs/hooks-intro.html).
   
 `useEffect()` handles the localStorage timestamp. It retrieves data from localStorage and, after 10 minutes, it updates the data by invoking `fetchData()`.
+
 `buildCards()` is called when `App` component is rendered. It checks the cities IDs array, `.map()` throught it and returns `Card` components for each city id passing its data.
 
 As the data fetching is not returned yet, it will render a `Loader` component as placeholder, but if there's some error it will render `TryAgain` component instead that has an `onClick` function that will call `fetchData()`.
