@@ -9,6 +9,10 @@
   margin-bottom: 30px;
   box-shadow: 0 0 4px $box_shadow;
 
+  &:first-child .info {
+    display: flex;
+  }
+
   &:last-child {
     margin: 0;
   }
@@ -36,12 +40,13 @@
       font-weight: 300;
       color: $orange;
       margin: 0;
+      letter-spacing: -2px;
 
       &.cold {
         color: $blue;
       }
 
-      &.heat {
+      &.hot {
         color: $red;
       }
     }
@@ -56,13 +61,13 @@
     display: flex;
     flex-direction: column;
     background-color: $card_footer;
-    padding-top: 15px;
   }
 
   .info {
-    display: flex;
+    display: none;
     flex-direction: row;
     justify-content: space-around;
+    padding-top: 15px;
 
     div {
       display: flex;
@@ -78,13 +83,14 @@
     p {
       color: $dark_grey;
       font-size: 17px;
-      margin: 6px 0;
+      margin: 4px 0 0;
     }
   }
 
   .last-update {
-    font-size: 11px;
+    font-size: 10px;
     color: $grey;
     text-align: center;
+    margin: 10px 0 15px;
   }
 }
