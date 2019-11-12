@@ -23,7 +23,9 @@ const App = () => {
         if (hasError) {
           setError(false);
         }
+        
         setCitiesData(response.data.list);
+        setLocalStorage(response.data.list);
       } else {
         throw new Error('error');
       }
@@ -31,11 +33,10 @@ const App = () => {
     .catch(error => !hasError ? setError(error) : null);
   };
 
-  useEffect(() => {
-    if (!citiesData.length) {
-      fetchData();
-    }
-  });
+  let setLocalStorage = data => {
+    localStorage.setItem('@weather-now/cities', JSON.stringify(data));
+    localStorage.setItem('@weather-now/citiesDate', Date.now());
+  }
 
   let buildCards = () => {
     if ( cityIDs.length ) {
@@ -47,6 +48,23 @@ const App = () => {
       });
     }
   };
+
+  useEffect(() => {
+    const date = localStorage.getItem('@weather-now/citiesDate');
+    const citiesDate = date && new Date(parseInt(date));
+    const now = new Date();
+
+    const dataAge = Math.round((now - citiesDate) / (1000 * 60));
+    const old = dataAge >= 10;
+
+    if (old) {
+      fetchData();
+    } else {
+      localStorage.getItem('@weather-now/cities') && setCitiesData(
+        JSON.parse(localStorage.getItem('@weather-now/cities'))
+      );
+    }
+  }, []);
 
   return (
     <div className="app">
