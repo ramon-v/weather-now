@@ -34,8 +34,15 @@ const App = () => {
   };
 
   let setLocalStorage = data => {
+    let timestamp = new Date();
+    
     localStorage.setItem('@weather-now/cities', JSON.stringify(data));
     localStorage.setItem('@weather-now/citiesDate', Date.now());
+    localStorage.setItem('@weather-now/timestamp', timestamp.toLocaleString('en-US', {
+      hour: 'numeric',
+      minute: 'numeric',
+      hour12: true
+    }));
   }
 
   let buildCards = () => {

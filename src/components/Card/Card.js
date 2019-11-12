@@ -46,7 +46,7 @@ const Card = (props) => {
                 <p>{data.main.pressure}<small>hPa</small></p>
               </div>
             </div>
-            <p className="last-update">Updated at 20:48:27 PM</p>
+            <p className="last-update">Updated at {localStorage.getItem('@weather-now/timestamp')}</p>
           </div> :
           null
         }
